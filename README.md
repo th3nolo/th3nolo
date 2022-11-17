@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+[![trophy](https://github-profile-trophy.vercel.app/?username=th3nolo)](https://github.com/ryo-ma/github-profile-trophy)
+
 <!--
 **th3nolo/th3nolo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
