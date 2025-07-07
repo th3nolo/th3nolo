@@ -101,13 +101,6 @@ I am a highly skilled and experienced software engineer with expertise in blockc
   <img src="https://img.shields.io/badge/GitHub_Agents-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Agents" />
 </div>
 
-## 🔥 Streak Stats
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=th3nolo&theme=default" alt="GitHub Streak" />
-</div>
-
----
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=th3nolo&color=blueviolet&style=flat-square&label=Profile+Views" alt="Profile views" />
