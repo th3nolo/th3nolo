@@ -67,7 +67,7 @@ I am a highly skilled and experienced software engineer with expertise in blockc
 ## 📊 Most Used Languages
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=th3nolo&layout=compact&theme=default&langs_count=12" alt="Top Languages" />
+  <img src="https://github-readme-stats-th3nolos-projects.vercel.app/api/top-langs/?username=th3nolo&layout=compact&theme=default&langs_count=12" alt="Top Languages" />
 </div>
 
 ## 🚀 Frameworks & Technologies
