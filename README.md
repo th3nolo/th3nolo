@@ -22,7 +22,7 @@ I am a highly skilled and experienced software engineer with expertise in blockc
 ### 💼 Professional Background
 
 **Back-end Developer**  
-*4+ Years of Experience in Blockchain & Web Development*
+*5+ Years of Experience in Blockchain & Web Development*
 
 - Develop and maintain decentralized applications (dApps) and smart contract systems
 - Create, test, and deploy Solidity smart contracts using OpenZeppelin standards
