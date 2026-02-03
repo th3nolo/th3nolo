@@ -70,22 +70,6 @@ I am a highly skilled and experienced software engineer with expertise in blockc
   <img src="https://github-readme-stats-th3nolos-projects.vercel.app/api/top-langs/?username=th3nolo&layout=compact&theme=default&langs_count=12" alt="Top Languages" />
 </div>
 
-## 🚀 Frameworks & Technologies
-
-<div align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nodejs,typescript,nestjs,express,solidity,react,mongodb&perline=7" />
-  </a>
-  <br/>
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=postgres,docker,git,github,rabbitmq,python,mysql&perline=7" />
-  </a>
-  <br/>
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=vscode,postman,linux,bash,markdown&perline=7" />
-  </a>
-</div>
-
 ## 🤖 AI Tools & Assistants
 
 <div align="center">
