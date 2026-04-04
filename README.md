@@ -47,17 +47,6 @@ Computer Science (2015-2021)
 
 </details>
 
-<details>
-<summary><strong>GitHub Trophies</strong></summary>
-
-<p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-trophies-self-deploy.vercel.app/?username=th3nolo&theme=flat&column=-1&margin-w=15&margin-h=15&no-trophies=Stars,Followers,Reviews&title=Issues,PullRequest,Commits,Repositories,Experience,Ancients,MultiLanguage,LongTimeUser,AllSuperRank" alt="GitHub profile trophies">
-  </a>
-</p>
-
-</details>
-
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=th3nolo&color=blueviolet&style=flat-square&label=Profile+Views" alt="Profile views" />
 </div>
