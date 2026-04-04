@@ -1,52 +1,44 @@
-<h1 align="center">Hi, I'm th3nolo</h1>
-<p align="center"><strong>Backend and blockchain engineer</strong></p>
+<h1 align="center">th3nolo</h1>
+<p align="center">Systems architect. I build AI pipelines, financial infrastructure, and cryptography systems.</p>
 
 <p align="center">
-  <a href="https://th3nolo.com">Website</a> •
-  <a href="https://www.linkedin.com/in/th3nolo/">LinkedIn</a> •
+  <a href="https://th3nolo.com">Website</a> &bull;
+  <a href="https://www.linkedin.com/in/th3nolo/">LinkedIn</a> &bull;
   <a href="https://www.upwork.com/freelancers/~01ce9b85323e9b2d50">Upwork</a>
 </p>
 
-## Summary
-I build production-grade backend services and smart contract systems for crypto and web products. I focus on security, reliability, and a clean developer experience.
+---
 
-## What I do
-- Design and ship smart contract systems (Solidity, OpenZeppelin).
-- Build scalable REST APIs and background workers (Node.js, TypeScript, NestJS).
-- Implement on-chain integrations (Ethers.js, Web3.js).
-- Automate monitoring and operational workflows for contract systems.
-- Deliver tested releases using modern tooling (Hardhat, Foundry).
+## What I've Built
 
-## Impact
-- Reduced serverless API latency by 70% and lowered infrastructure overhead by 50% through performance tuning and architecture updates.
-- Sustained 99.5% uptime by improving integrations, observability, and failure handling.
-- Increased automated test coverage to 95% and reduced production deployment failures by 40% by strengthening CI/CD workflows.
-- Reduced post-release critical bugs by 15% by tightening release processes and monitoring.
-- Delivered 50+ onboarding and KYB endpoints and maintained 17+ database revisions with consistent migrations and backward compatibility.
-- Reduced quarterly cloud compute costs by 15% through resource optimization and deployment improvements.
-- Cut client integration time by 50% by shipping SDKs with clear APIs and documentation.
+**AI Document Processing Pipeline (2025-2026)**
+- Multi-model AI pipeline that extracts structured data from financial documents in Arabic and English
+- 3 AI models with deterministic validation and human review fallback
+- Led a team of 3 engineers, owned architecture specs, infrastructure, and the AI/OCR service
+- Stack: Python/FastAPI, TypeScript, React, PostgreSQL, Cloud GPU, Blockchain anchoring
 
-## Selected experience
+**DeFi Position Management Platform (2024-2025)**
+- Automated leveraged position management for 69+ smart contract wallets on a major lending protocol
+- $2M+ in cumulative collateral flows, zero liquidations, cross-chain migration
+- Health monitoring, auto-rebalancing, liquidation prevention, data pipeline with backtesting
+- Stack: Rust, Solidity, TypeScript, Go, React, PostgreSQL
 
-<details>
-<summary><strong>Back-end Developer (Remote) | Stack | Mar 2024 - Present</strong></summary>
+**Privacy Consent Infrastructure (2025)**
+- Threshold cryptography consent network, 3M records verified in under 3 seconds
+- Rust core compiled to WASM, distributed node network, blockchain anchored
+- Multi-language SDKs: Rust, TypeScript, Dart, Java
+- Stack: Rust, WASM, TypeScript, Dart
 
-- Built and maintained secure REST APIs and background workers using Node.js and TypeScript.
-- Optimized serverless systems on AWS Lambda and Google Cloud Functions, reducing average latency by 70% and lowering infrastructure overhead by 50%.
-- Integrated external services and data sources while sustaining 99.5% uptime through reliability and availability improvements.
-- Established CI/CD workflows that raised test coverage to 95% and reduced production deployment failures by 40%.
-- Improved release quality and operations, reducing post-release critical bugs by 15%.
+## Tech Stack
 
-<strong>Stack:</strong> Node.js, TypeScript, AWS Lambda, Google Cloud Functions, CI/CD
-
-</details>
-
-## Tech stack
-**Smart contracts:** Solidity, OpenZeppelin, Hardhat, Foundry  
-**Backend:** Node.js, TypeScript, NestJS, Express  
-**Data and infra:** PostgreSQL, MySQL, MongoDB, Docker, RabbitMQ  
-**Other:** Python (crypto analysis), Git, GitHub, Socket.IO  
-**Language:** English (C1)
+| Category | Technologies |
+|---|---|
+| **Languages** | Rust, TypeScript, Python, Go, Solidity, Dart |
+| **AI/ML** | Multi-model pipelines, OCR, document extraction, LLM integration |
+| **Backend** | FastAPI, Node.js, NestJS, Express, WebSockets |
+| **Smart Contracts** | Solidity, Hardhat, Foundry |
+| **Data** | PostgreSQL |
+| **Infrastructure** | Docker, Google Cloud, WASM |
 
 <details>
 <summary><strong>Education</strong></summary>
@@ -56,25 +48,13 @@ Computer Science (2015-2021)
 </details>
 
 <details>
-<summary><strong>GitHub trophies</strong></summary>
+<summary><strong>GitHub Trophies</strong></summary>
 
 <p align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
     <img src="https://github-trophies-self-deploy.vercel.app/?username=th3nolo&theme=flat&column=-1&margin-w=15&margin-h=15&no-trophies=Stars,Followers,Reviews&title=Issues,PullRequest,Commits,Repositories,Experience,Ancients,MultiLanguage,LongTimeUser,AllSuperRank" alt="GitHub profile trophies">
   </a>
 </p>
-
-</details>
-
-<details>
-<summary><strong>Tooling</strong></summary>
-
-**LLM platforms and routing:** OpenAI, Anthropic, Google, OpenRouter, Fireworks AI, DeepInfra  
-**Open-source and self-hosted:** Hugging Face (private models)  
-**Orchestration and evaluation:** DSPy, Mastra, Python harnesses  
-**Agents and async workflows:** Cursor Cloud, asynchronous agent workflows  
-**Automated code review:** Cursor Bugbot, Codex review, Google automated code review, Auggie reviews  
-**Developer workflow:** VS Code, Cursor, Windsurf, Zed, Gemini CLI, GitHub Copilot
 
 </details>
 
