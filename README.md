@@ -2,8 +2,6 @@
 <p align="center">Systems architect. I build AI pipelines, financial infrastructure, and cryptography systems.</p>
 
 <p align="center">
-  <a href="https://th3nolo.com">Website</a> &bull;
-  <a href="https://www.linkedin.com/in/th3nolo/">LinkedIn</a> &bull;
   <a href="https://www.upwork.com/freelancers/~01ce9b85323e9b2d50">Upwork</a>
 </p>
 
