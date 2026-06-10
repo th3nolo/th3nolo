@@ -1,5 +1,9 @@
 <h1 align="center">th3nolo</h1>
-<p align="center">Backend systems architect. I build the backend layers where a wrong number costs money: AI document pipelines, DeFi automation, Rust/WASM cryptography. I take the time to build systems that keep running without me.</p>
+<p align="center">
+  Backend systems architect. I build the backend layers where a wrong number costs money:<br>
+  AI document pipelines, DeFi automation, Rust/WASM cryptography.<br>
+  I take the time to build systems that keep running without me.
+</p>
 
 <p align="center">
   <a href="https://th3nolo.com">Website</a> &bull;
@@ -43,7 +47,7 @@
 | AI/ML | Multi-model pipelines, OCR, document extraction, LLM integration |
 | Backend | FastAPI, Node.js, NestJS, Express, WebSockets |
 | Smart contracts | Solidity, Hardhat, Foundry |
-| Data | PostgreSQL |
+| Data | PostgreSQL, MongoDB |
 | Infrastructure | Docker, Google Cloud, WASM, Hedera |
 
 <details>
