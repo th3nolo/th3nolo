@@ -30,10 +30,10 @@
 
 ## Public code
 
-- [wdk-browser-extension-starter-public](https://github.com/th3nolo/wdk-browser-extension-starter-public) — Manifest V3 Chrome/Brave wallet on Tether's Wallet Development Kit: AES-256-GCM local vault, background-only key authority, transaction review that decodes ERC-20, Uniswap, Aave, bridge, and Safe calldata across seven chains. 290 tests, MIT
-- [aave-v3-data](https://github.com/th3nolo/aave-v3-data) — Aave V3 reserve data for 13 networks, published daily by GitHub Actions to GitHub Pages; running unattended since July 2025 with no servers and no API keys
-- [colab-inference](https://github.com/th3nolo/colab-inference) — turns Colab's free T4 GPU into a local OpenAI-compatible LLM API
-- [downloadtomarkdown.com](https://downloadtomarkdown.com) — live document-conversion SaaS, built solo: scanned PDFs, images, and DOCX in, clean Markdown out
+- [wdk-browser-extension-starter-public](https://github.com/th3nolo/wdk-browser-extension-starter-public) - Manifest V3 Chrome/Brave wallet on Tether's Wallet Development Kit: AES-256-GCM local vault, background-only key authority, transaction review that decodes ERC-20, Uniswap, Aave, bridge, and Safe calldata across seven chains. 290 tests, MIT
+- [aave-v3-data](https://github.com/th3nolo/aave-v3-data) - Aave V3 reserve data for 13 networks, published daily by GitHub Actions to GitHub Pages; running unattended since July 2025 with no servers and no API keys
+- [colab-inference](https://github.com/th3nolo/colab-inference) - turns Colab's free T4 GPU into a local OpenAI-compatible LLM API
+- [downloadtomarkdown.com](https://downloadtomarkdown.com) - live document-conversion SaaS, built solo: scanned PDFs, images, and DOCX in, clean Markdown out
 
 ## Tech stack
 
