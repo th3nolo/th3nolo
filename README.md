@@ -13,14 +13,13 @@
 
 **Financial document AI pipeline (2026, in production)**
 - Tech lead on a compliance platform; sole owner of the OCR service that turns Arabic and English audited financials into verified structured data
-- Two AI channels extract every page in parallel and vote; deterministic checks (assets = liabilities + equity, section totals, cross-year) decide what gets trusted, everything else routes to a human
-- Accuracy went from 34% to 94% on real statements; a 22-page audited filing verifies in 97 seconds at $0.30–$0.42 per company
+- Two AI channels read every page in parallel and vote. Deterministic checks (assets = liabilities + equity, section totals, cross-year) decide what gets trusted; anything uncertain goes to a human
+- Accuracy went from 34% to 94% on real statements. A 22-page audited filing takes 97 seconds and costs $0.30–$0.42 per company
 - TypeScript, Python/FastAPI, PostgreSQL, LLM vision + OCR, Hedera
 
 **DeFi position automation (2024–2026)**
-- Backend automation that protected 84 smart-wallet positions on Aave V3 across 18 months, where a missed health check means instant liquidation
-- More than $2M in collateral flow, zero liquidations; in historical stress tests the protection logic survives all 7 major crashes 2021–2025
-- Wrote the Solidity wallet factory solo and deployed it to Arbitrum
+- Protected 84 smart-wallet positions on Aave V3 for 18 months, where a missed health check means instant liquidation. Wrote the Solidity wallet factory solo and deployed it to Arbitrum
+- More than $2M in collateral flow, zero liquidations. In historical stress tests the protection logic survives all 7 major crashes 2021–2025
 - Rust, Solidity, TypeScript, Go, React, PostgreSQL
 
 **Threshold cryptography network (2025)**
