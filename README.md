@@ -39,6 +39,8 @@
 
 ## Public code
 
+- [quake-reunite](https://github.com/th3nolo/quake-reunite) - missing-person search for the June 2026 La Guaira earthquake: de-duplicates people across hospital-list photos, PDFs, and relief sites by cédula and name into one API and 3D map; Mistral OCR plus Gemma 4 31B on Cerebras read the sources, 871 hospitalized people entered the index from list photos alone. Built for the Cerebras and Google DeepMind hackathon
+- [sqlbench-harness](https://github.com/th3nolo/sqlbench-harness) - benchmark harness for LLM-generated SQL across BIRD Mini-Dev, KaggleDBQA, Defog SQL-Eval, and Spider 2.0 DBT: executes predicted and gold SQL on the same local database, reports exact-result accuracy, token usage, and cost, and audits benchmark archives before anything runs
 - [wdk-browser-extension-starter-public](https://github.com/th3nolo/wdk-browser-extension-starter-public) - Manifest V3 Chrome/Brave wallet on Tether's Wallet Development Kit: AES-256-GCM local vault, background-only key authority, transaction review that decodes ERC-20, Uniswap, Aave, bridge, and Safe calldata across seven chains. 290 tests, MIT
 - [aave-v3-data](https://github.com/th3nolo/aave-v3-data) - Aave V3 reserve data for 13 networks, published daily by GitHub Actions to GitHub Pages; running unattended since July 2025 with no servers and no API keys
 - [colab-inference](https://github.com/th3nolo/colab-inference) - turns Colab's free T4 GPU into a local OpenAI-compatible LLM API
@@ -49,7 +51,7 @@
 | Category | Technologies |
 |---|---|
 | Languages | Rust, TypeScript, Python, Go, Solidity, Dart |
-| AI/ML | Document AI, OCR, RAG, agents, multi-model pipelines, LLM integration |
+| AI/ML | Document AI, OCR, RAG, agents, multi-model pipelines, LLM evaluation, LLM integration |
 | Backend | FastAPI, Node.js, NestJS, Express, WebSockets |
 | Smart contracts | Solidity, Hardhat, Foundry |
 | Data | PostgreSQL, MongoDB |
