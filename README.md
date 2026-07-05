@@ -40,7 +40,7 @@
 ## Public code
 
 - [quake-reunite](https://github.com/th3nolo/quake-reunite) - missing-person search API and 3D map for the June 2026 La Guaira earthquake; OCRs hospital lists and de-duplicates records by cédula and name
-- [sqlbench-harness](https://github.com/th3nolo/sqlbench-harness) - benchmark harness for LLM-generated SQL (BIRD, KaggleDBQA, Defog SQL-Eval, Spider 2.0); executes predicted vs gold SQL and reports accuracy and cost
+- [sqlbench-harness](https://github.com/th3nolo/sqlbench-harness) - benchmark harness for LLM-generated SQL (BIRD, KaggleDBQA, Defog SQL-Eval, Spider 2.0); runs the model's SQL and the benchmark's known-correct SQL on the same database and reports accuracy and cost
 - [wdk-browser-extension-starter-public](https://github.com/th3nolo/wdk-browser-extension-starter-public) - Manifest V3 Chrome/Brave wallet on Tether's Wallet Development Kit: AES-256-GCM local vault, background-only key authority, transaction review that decodes ERC-20, Uniswap, Aave, bridge, and Safe calldata across seven chains. 290 tests, MIT
 - [aave-v3-data](https://github.com/th3nolo/aave-v3-data) - Aave V3 reserve data for 13 networks, published daily by GitHub Actions to GitHub Pages; running unattended since July 2025 with no servers and no API keys
 - [colab-inference](https://github.com/th3nolo/colab-inference) - turns Colab's free T4 GPU into a local OpenAI-compatible LLM API
