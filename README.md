@@ -1,69 +1,93 @@
-<h1 align="center">Manuel P.</h1>
+<h1 align="center">Manuel Parra</h1>
+
 <p align="center">
-  Lead software engineer working on document AI and RAG for financial data,<br>
-  multi-tenant SaaS backends, and Rust/WASM cryptography.
+  <strong>Lead software engineer · applied AI & inference systems</strong><br>
+  I build backend-heavy systems for messy inputs, expensive mistakes, and real operating constraints.
 </p>
 
 <p align="center">
   <a href="https://th3nolo.com">Website</a> &bull;
-  <a href="https://www.linkedin.com/in/th3nolo/">LinkedIn</a> &bull;
-  <a href="https://www.upwork.com/freelancers/~01ce9b85323e9b2d50">Upwork</a>
+  <a href="https://th3nolo.com/articles">Engineering notes</a> &bull;
+  <a href="https://www.linkedin.com/in/th3nolo/">LinkedIn</a>
 </p>
 
 ---
 
-## What I've built
+## Current work
 
-**Multi-tenant construction reporting platform (2026, in production)**
-- Lead engineer and architect on a project-scoped platform that ingests jobsite documents and SharePoint files and normalizes them into structured reporting data across an owner/contractor/subcontractor hierarchy
-- Tenant isolation by row-level security, schema-per-tenant, and scoped credentials; source-traceable ingestion with raw values, validation flags, and document evidence
-- Seven reporting workflows: source-file review, dashboards, manpower/equipment analytics, cost projections, weather-cross-referenced anomaly flags, grounded daily briefs/Q&A
-- FastAPI, React/Vite, PDF workers, Pydantic, AI reporting
+**Large-model inference on Blackwell**
 
-**Financial document AI pipeline (2026, in production)**
-- Tech lead on a compliance platform; sole owner of the OCR service that turns Arabic and English audited financials into verified structured data
-- Two AI channels read every page in parallel and vote. Deterministic checks (assets = liabilities + equity, section totals, cross-year) accept or reject each value; anything uncertain goes to a human
-- Accuracy went from 34% to 94% on real statements; values that fail the checks go to human review instead of into the output. Processing costs $0.30–$0.42 per company
-- TypeScript, Python/FastAPI, PostgreSQL, LLM vision + OCR, Hedera
+- Serving and profiling open-weight models on RTX PRO 6000 Blackwell systems with vLLM, SGLang, TensorRT-LLM, and NVIDIA Dynamo.
+- Current work covers the GLM-5.2 504B-parameter MoE checkpoint, sparse attention, NVFP4/W4A16 checkpoints, tensor and decode-context parallelism, KV-cache pressure, CUDA/NCCL failures, and scale-to-zero workers.
+- Validated correct sparse-attention output and cold prompts through 240K tokens on an 8-GPU GCP `g4-standard-384` worker. [Read the investigation →](https://th3nolo.com/articles/glm-5-2-blackwell-sm120)
 
-**DeFi position automation (2024–2026)**
-- Ran liquidation protection for 84 smart-wallet positions on Aave V3 over 18 months. Wrote the Solidity wallet factory solo and deployed it to Arbitrum
-- More than $2M in collateral flow, zero liquidations. In historical stress tests the protection logic survives all 7 major crashes 2021–2025
-- Rust, Solidity, TypeScript, Go, React, PostgreSQL
+**Document extraction as infrastructure**
 
-**Threshold cryptography network (2025)**
-- Built the cryptography and backend of a consent-verification network: 7-of-10 threshold decryption, BLS aggregate signatures, Merkle proofs anchored to Hedera
-- 3.63M real device IDs hashed, Merkle-batched, and pinned in 63 seconds; three independent nodes verify every consent
-- SDKs shipped in Dart, TypeScript, Java, and Rust
-- Rust, WASM, BLS12-381, NATS
+- Building a backend-agnostic extraction service for OCR, layout parsing, normalization, provenance, deterministic validation, and human review.
+- Jobs are idempotent, resumable, shard-aware, and versioned so every value can be traced to its source document and parser/model configuration.
+- Current performance target: 3,000 documents in 300 seconds without coupling the extraction runtime to one product backend.
 
-## Public code
+**Gemini Nano reverse engineering**
 
-- [quake-reunite](https://github.com/th3nolo/quake-reunite) - missing-person search API and 3D map for the June 2026 La Guaira earthquake; OCRs hospital lists and de-duplicates records by cédula and name
-- [sqlbench-harness](https://github.com/th3nolo/sqlbench-harness) - benchmark harness for LLM-generated SQL (BIRD, KaggleDBQA, Defog SQL-Eval, Spider 2.0); runs the model's SQL and the benchmark's known-correct SQL on the same database and reports accuracy and cost
-- [wdk-browser-extension-starter-public](https://github.com/th3nolo/wdk-browser-extension-starter-public) - Chrome/Brave wallet starter on Tether's Wallet Development Kit: encrypted local vault, keys held only in the background service worker, transaction review that decodes ERC-20, Uniswap, Aave, bridge, and Safe calls across seven chains. 290 tests, MIT
-- [aave-v3-data](https://github.com/th3nolo/aave-v3-data) - Aave V3 reserve data for 13 networks, published daily by GitHub Actions to GitHub Pages; running unattended since July 2025 with no servers and no API keys
-- [colab-inference](https://github.com/th3nolo/colab-inference) - turns Colab's free T4 GPU into a local OpenAI-compatible LLM API
-- [downloadtomarkdown.com](https://downloadtomarkdown.com) - document-conversion SaaS, built and run solo: scanned PDFs, images, and DOCX in, Markdown out
+- Reconstructing Chrome's on-device Gemini Nano v3 path from a 3.98 GB `weights.bin`: tensor offsets, Gemma-family architecture, INT4 group layout, FP16 scale/zero side tables, and the layer-0 forward pass.
+- Instrumenting Chrome/WebGPU with CDP and Frida, then comparing dequantized tensors against runtime behavior. Text generation remains gated on activation-stability checks; plausible output is not treated as proof.
 
-## Tech stack
+**Multi-tenant AI systems**
 
-| Category | Technologies |
+- Designing control planes that provision isolated agent workers per tenant, encrypt credentials, enforce scoped access, meter usage, and share normalized ingestion without sharing tenant state.
+- The useful work is around the model: contracts, retries, observability, evaluation, evidence, and failure recovery.
+
+## Shipped systems
+
+**ConTrust Suite — multi-tenant construction reporting**
+
+- Lead engineer and architect for a production platform that converts jobsite documents and SharePoint files into normalized reporting data across owner, contractor, and subcontractor boundaries.
+- Row-level security, schema-per-tenant isolation, scoped credentials, raw-value retention, validation flags, and source-file evidence feed seven reporting workflows.
+- FastAPI, React/Vite, PDF workers, Pydantic, PostgreSQL, AI reporting.
+
+**Financial document AI**
+
+- Owned the OCR/extraction service for Arabic and English audited financial statements.
+- Parallel extraction channels vote; accounting identities, section totals, and cross-year checks decide what is accepted and what is routed to a human.
+- Internal extraction accuracy improved from 34% to 94% on production statements, with processing at approximately $0.30–$0.42 per company.
+
+**DeFi position protection**
+
+- Built the Solidity wallet factory and backend automation used across 84 Aave V3 smart-wallet positions over 18 months.
+- More than $2M in collateral flow with zero liquidations; the protection logic also survives seven historical 2021–2025 crash scenarios.
+- Solidity, Rust, TypeScript, Go, React, PostgreSQL, Arbitrum.
+
+**Threshold cryptography and consent verification**
+
+- Built a 7-of-10 threshold-decryption network using BLS aggregate signatures and Merkle proofs anchored to Hedera.
+- Batched and pinned 3.63M hashed device identifiers in 63 seconds; three independent nodes verify each consent record.
+- Rust, WASM, BLS12-381, NATS; SDKs in Dart, TypeScript, Java, and Rust.
+
+## Public work
+
+- [Venezuel.help](https://venezuel.help) / [quake-reunite](https://github.com/th3nolo/quake-reunite) — earthquake-response search and 3D map for La Guaira. FastAPI, SQLite, Gemma 4 on Cerebras, Mistral OCR, MapLibre, and a ten-minute ingestion/reconciliation loop.
+- [sqlbench-harness](https://github.com/th3nolo/sqlbench-harness) — audited execution harness for LLM-generated SQL across BIRD, KaggleDBQA, Defog SQL-Eval, and Spider 2.0, with result accuracy, token use, cost, and fairness classification.
+- [wdk-browser-extension-starter-public](https://github.com/th3nolo/wdk-browser-extension-starter-public) — Chrome/Brave wallet starter using Tether WDK: encrypted local vault, service-worker key custody, decoded transaction review across seven chains, and 290 tests.
+- [aave-v3-data](https://github.com/th3nolo/aave-v3-data) — Aave V3 reserve data for 13 networks, published daily by GitHub Actions with no application server or API keys.
+- [colab-inference](https://github.com/th3nolo/colab-inference) — exposes a Colab T4 as a local OpenAI-compatible inference endpoint.
+- [downloadtomarkdown.com](https://downloadtomarkdown.com) — scanned PDFs, images, and DOCX to Markdown; built and operated solo.
+
+## Technical surface
+
+| Area | Tools and systems |
 |---|---|
-| Languages | Rust, TypeScript, Python, Go, Solidity, Dart |
-| AI/ML | Document AI, OCR, RAG, agents, multi-model pipelines, LLM evaluation, LLM integration |
-| Backend | FastAPI, Node.js, NestJS, Express, WebSockets |
-| Smart contracts | Solidity, Hardhat, Foundry |
-| Data | PostgreSQL, MongoDB |
-| Infrastructure | Docker, Google Cloud, WASM, Hedera |
+| Languages | Python, TypeScript, Rust, Go, Solidity, Dart |
+| Inference | vLLM, SGLang, TensorRT-LLM, NVIDIA Dynamo, NVFP4/W4A16, CUDA, NCCL |
+| Applied AI | OCR, document intelligence, RAG, agent systems, multimodal extraction, evaluation |
+| Backend and data | FastAPI, Node.js, NestJS, PostgreSQL, MongoDB, SQLite, WebSockets |
+| Cryptography | Solidity, Foundry, Hardhat, Ethers.js, BLS12-381, Merkle proofs, WASM |
+| Infrastructure | Docker, Google Cloud, GitHub Actions, scale-to-zero workers |
+
+I care about reproducible measurements, source evidence, deterministic validation, and systems that keep running after the first demo.
 
 <details>
 <summary><strong>Education</strong></summary>
 
-Computer Science (2015-2021)
+Computer Science, 2015–2021
 
 </details>
-
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=th3nolo&color=blueviolet&style=flat-square&label=Profile+Views" alt="Profile views" />
-</div>
