@@ -23,6 +23,7 @@ Most of my client work is private, so the results below link to case studies and
 | System | Result | Source |
 |---|---|---|
 | Financial document AI, Arabic and English audited statements | 34% → 94% on an internal extraction and calculation evaluation. One 22-page filing in 97 s for USD 0.30 to 0.42 | [case study](https://th3nolo.com/projects/financial-document-ai) |
+| semgate: permission gate for coding agents, TypeSafe Jev judge | 0 of 47 harmful-allow base cases on a 355-case set (95% upper bound 6.2%). 83.0% of benign actions auto-allowed (95% CI 78.4% to 87.5%) | [evals](https://github.com/th3nolo/semgate/blob/main/EVALS.md) |
 | LangGraph RAG chat, JEV-first routing | 0.981 vs 0.957 accuracy on 322 labeled messages | [note](https://th3nolo.com/articles/how-routing-a-langgraph-rag-chat-with-jev-got-me-98-accuracy) |
 | Small-model fine-tune (LoRA), training-data repair | Valid plans 1/81 → 75/81, strict pairwise F1 0.01 → 0.88 on 81 development cases | [note](https://th3nolo.com/articles/what-i-learned-fine-tuning-a-small-model) |
 | GLM-5.2-504B on 8× RTX PRO 6000 (vLLM, SM120) | 240K-token context after a sparse-attention layer fix | [note](https://th3nolo.com/articles/glm-5-2-blackwell-sm120) |
@@ -31,6 +32,7 @@ Most of my client work is private, so the results below link to case studies and
 
 | Project | What it does | |
 |---|---|---|
+| [semgate](https://github.com/th3nolo/semgate) | Permission gate for coding agents. Deterministic rules decide the certain cases, a typed Jev judge handles the rest, and every doubt goes to the human. Hooks into Claude Code, Codex, OpenCode, Gemini CLI, Antigravity, Copilot CLI, and more. 2,958 tests and TLA+ models. Host hook behavior measured with [hookconf](https://github.com/th3nolo/hookconf). | Python |
 | [quake-reunite](https://github.com/th3nolo/quake-reunite) | Search API and map for people and aid centers after the June 2026 La Guaira earthquake. Mistral OCR and Gemma 4 on Cerebras read WhatsApp lists, hospital-list photos, and PDFs, then merge duplicate people across sources. [Live](https://venezuel.help/) | Python |
 | [openrouter-mcp](https://github.com/th3nolo/openrouter-mcp) | Stateless MCP 2026-07-28 server and CLI for OpenRouter. 13 tools, 1 resource, HTTP and stdio. | TypeScript |
 | [sqlbench-harness](https://github.com/th3nolo/sqlbench-harness) | Benchmark for LLM-generated SQL on BIRD, KaggleDBQA, Defog SQL-Eval, and Spider 2.0. Treats benchmark text as untrusted prompt input. Reports accuracy, errors, tokens, and cost. | Python |
