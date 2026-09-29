@@ -1,55 +1,55 @@
 <h1 align="center">Manuel Parra</h1>
 
 <p align="center">
-  <strong>Lead software engineer · backend and applied AI systems</strong><br>
-  Backend services for document processing, data validation, model inference, and reliable operations.
+  <strong>Forward deployed AI engineer · lead IC</strong><br>
+  I build document-AI, inference, and backend systems with clients and ship them to production.<br>
+  Remote from UTC-4 · English and Spanish · open to senior and lead IC roles
 </p>
 
 <p align="center">
-  <a href="https://th3nolo.com">Website</a> &bull;
-  <a href="https://th3nolo.com/articles">Engineering notes</a> &bull;
+  <a href="https://th3nolo.com">th3nolo.com</a> ·
+  <a href="https://th3nolo.com/articles">Engineering notes</a> ·
+  <a href="https://th3nolo.com/open-source">Open-source log</a> ·
+  <a href="https://th3nolo.com/cv">CV</a> ·
   <a href="https://www.linkedin.com/in/th3nolo/">LinkedIn</a>
 </p>
 
 ---
 
-## Work areas
+### Measured results
 
-### Document processing
+| System | Result | Source |
+|---|---|---|
+| Financial document AI, Arabic and English audited statements | 34% → 94% on an internal extraction and calculation evaluation. One 22-page filing in 97 s for USD 0.30 to 0.42 | [case study](https://th3nolo.com/projects/financial-document-ai) |
+| LangGraph RAG chat, JEV-first routing | 0.981 vs 0.957 accuracy on 322 labeled messages | [note](https://th3nolo.com/articles/how-routing-a-langgraph-rag-chat-with-jev-got-me-98-accuracy) |
+| Small-model fine-tune (LoRA), training-data repair | Valid plans 1/81 → 75/81, strict pairwise F1 0.01 → 0.88 on 81 development cases | [note](https://th3nolo.com/articles/what-i-learned-fine-tuning-a-small-model) |
+| GLM-5.2-504B on 8× RTX PRO 6000 (vLLM, SM120) | 240K-token context after a sparse-attention layer fix | [note](https://th3nolo.com/articles/glm-5-2-blackwell-sm120) |
 
-- ConTrust Suite is a multi-tenant construction reporting platform.
-- Its backend handles PDF ingestion, OCR, extraction, validation, SharePoint sync, reporting, billing, and AI briefs and questions.
-- The system keeps source files, raw values, validation flags, and evidence for review.
-- The OCR service processes Arabic and English financial statements. It classifies pages, extracts values, and checks document structure.
+### Public projects
 
-### Model runtime investigation
+| Project | What it does | |
+|---|---|---|
+| [quake-reunite](https://github.com/th3nolo/quake-reunite) | Search API and map for people and aid centers after the June 2026 La Guaira earthquake. Mistral OCR and Gemma 4 on Cerebras read WhatsApp lists, hospital-list photos, and PDFs, then merge duplicate people across sources. [Live](https://venezuel.help/) | Python |
+| [openrouter-mcp](https://github.com/th3nolo/openrouter-mcp) | Stateless MCP 2026-07-28 server and CLI for OpenRouter. 13 tools, 1 resource, HTTP and stdio. | TypeScript |
+| [sqlbench-harness](https://github.com/th3nolo/sqlbench-harness) | Benchmark for LLM-generated SQL on BIRD, KaggleDBQA, Defog SQL-Eval, and Spider 2.0. Treats benchmark text as untrusted prompt input. Reports accuracy, errors, tokens, and cost. | Python |
+| [verifiable-exchange-demo](https://github.com/th3nolo/verifiable-exchange-demo) | Limit-order engine. Anyone can replay its history from signed orders, Merkle proofs, and on-chain anchors. [Live demo](https://exchange.th3nolo.com) | Rust |
+| [dep-age-gate](https://github.com/th3nolo/dep-age-gate) | Refuses dependency versions younger than 72 hours. Lockfile audit, pre-commit hook, and GitHub Action. | Python |
 
-- The Gemini Nano project studies Chrome's on-device model from a measured 3.98 GB `weights.bin` file.
-- The project maps the file layout and implements analysis and inference code in Python.
-- Findings are labeled as reverse-engineering results. They are not treated as vendor documentation.
+### Upstream contributions
 
-### Backend and reliability
+- **Merged** · OpenClaw installer PR #85 ([commit bfc0bd9](https://github.com/Nicell/clawd.bot/commit/bfc0bd96882ce91faf34be107b6b8ff73bc1b189)): rewrote the Windows install checks. Three of the functions still run in the live `install.ps1`.
+- **Fixed** · [hiero-ledger/hiero-sdk-js](https://th3nolo.com/open-source): showed that the published `@hashgraph/sdk` still resolved protobufjs 8.0.0 (GHSA-xq3m-2v4x-88gg, RCE) after the upstream fix.
+- **Root cause** · [openai/codex#34801](https://github.com/openai/codex/issues/34801): the desktop app fetched signed image URLs without the Bearer token.
+- 19 more reproductions on Codex, Claude Code, and OpenCode → [full log with evidence](https://th3nolo.com/open-source)
 
-- Common work includes API design, background jobs, database services, external data sources, retries, observability, and failure recovery.
-- The main languages are Python, TypeScript, Rust, Go, and Solidity.
+### Latest engineering notes
 
-## Public projects
+<!-- NOTES:START -->
+- [How routing a LangGraph RAG chat with JEV got me 98% accuracy](https://th3nolo.com/articles/how-routing-a-langgraph-rag-chat-with-jev-got-me-98-accuracy) · 2026-09-27
+- [What I learned fine-tuning a small model: mistakes you can avoid](https://th3nolo.com/articles/what-i-learned-fine-tuning-a-small-model) · 2026-09-16
+- [Building a strict stateless MCP 2026-07-28 server for OpenRouter](https://th3nolo.com/articles/openrouter-stateless-mcp-2026-07-28) · 2026-08-31
+- [Building a Verifiable Exchange: Signed Orders, Replayable Execution, and On-Chain Anchors](https://th3nolo.com/articles/verifiable-exchange-signed-log-onchain-anchors) · 2026-08-27
+- [Serving GLM-5.2-504B on RTX PRO 6000: the vLLM sparse attention fix on SM120](https://th3nolo.com/articles/glm-5-2-blackwell-sm120) · 2026-07-04
+<!-- NOTES:END -->
 
-- [QuakeReunite](https://github.com/th3nolo/quake-reunite) : search API and maps for people and aid centers after the June 24, 2026 La Guaira earthquake. The pipeline uses FastAPI, SQLite, Mistral OCR, and Gemma 4 on Cerebras. A maintenance loop refreshes the index every ten minutes.
-- [sqlbench-harness](https://github.com/th3nolo/sqlbench-harness) : evaluation harness for SQL generated by language models. It records result accuracy, execution errors, token use, provider cost, and fairness class. It separates fair runs from diagnostic runs.
-- [WDK Browser Extension Starter](https://github.com/th3nolo/wdk-browser-extension-starter-public) : Chrome and Brave wallet extension starter with an encrypted local vault, background-worker key custody, origin-scoped dApp access, and transaction review.
-- [Aave V3 Data](https://github.com/th3nolo/aave-v3-data) : daily Aave V3 reserve data for 13 networks. GitHub Actions publishes static JSON and HTML without an application server or API keys.
-- [Colab Inference](https://github.com/th3nolo/colab-inference) : local OpenAI-compatible API for language models running on Google Colab GPUs.
-
-## Technical surface
-
-| Area | Tools and systems |
-|---|---|
-| Languages | Python, TypeScript, Rust, Go, Solidity |
-| Applied AI | OCR, document intelligence, retrieval, agents, multimodal extraction, evaluation |
-| Backend and data | FastAPI, Node.js, NestJS, PostgreSQL, MongoDB, SQLite, WebSockets |
-| Inference | vLLM, SGLang, TensorRT-LLM, CUDA, NCCL |
-| Cryptography | Foundry, Hardhat, Ethers.js, BLS12-381, Merkle proofs, WASM |
-| Infrastructure | Docker, Google Cloud, GitHub Actions, background workers |
-
-The work is measured with source evidence, reproducible tests, and deterministic validation.
+<sub>Python · TypeScript · Rust · Go · Solidity. FastAPI, NestJS, PostgreSQL, vLLM, Docker, GitHub Actions</sub>
