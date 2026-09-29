@@ -2,8 +2,8 @@
 
 <p align="center">
   <strong>Forward deployed AI engineer · lead IC</strong><br>
-  I build document-AI, inference, and backend systems with clients and ship them to production.<br>
-  Remote from UTC-4 · English and Spanish · open to senior and lead IC roles
+  I work with clients to put document AI and model inference into production, and I build the backend around it.<br>
+  Remote from UTC-4. English and Spanish. Open to senior and lead IC roles.
 </p>
 
 <p align="center">
@@ -15,6 +15,8 @@
 </p>
 
 ---
+
+Most of my client work is private, so the results below link to case studies and write-ups. The public projects further down are code you can clone and run.
 
 ### Measured results
 
@@ -37,10 +39,10 @@
 
 ### Upstream contributions
 
-- **Merged** · OpenClaw installer PR #85 ([commit bfc0bd9](https://github.com/Nicell/clawd.bot/commit/bfc0bd96882ce91faf34be107b6b8ff73bc1b189)): rewrote the Windows install checks. Three of the functions still run in the live `install.ps1`.
-- **Fixed** · [hiero-ledger/hiero-sdk-js](https://th3nolo.com/open-source): showed that the published `@hashgraph/sdk` still resolved protobufjs 8.0.0 (GHSA-xq3m-2v4x-88gg, RCE) after the upstream fix.
-- **Root cause** · [openai/codex#34801](https://github.com/openai/codex/issues/34801): the desktop app fetched signed image URLs without the Bearer token.
-- 19 more reproductions on Codex, Claude Code, and OpenCode → [full log with evidence](https://th3nolo.com/open-source)
+- My PR #85 to the OpenClaw installer was merged ([commit bfc0bd9](https://github.com/Nicell/clawd.bot/commit/bfc0bd96882ce91faf34be107b6b8ff73bc1b189)). It rewrote the Windows install checks, and three of those functions still run in the live `install.ps1`.
+- In [hiero-sdk-js](https://th3nolo.com/open-source), I showed that the published `@hashgraph/sdk` still pulled in protobufjs 8.0.0 (GHSA-xq3m-2v4x-88gg, a remote code execution bug) after the upstream fix. The issue was closed as completed.
+- In [openai/codex#34801](https://github.com/openai/codex/issues/34801), I traced broken image thumbnails to the desktop app fetching signed URLs without the Bearer token.
+- I also reproduced 19 bugs in Codex, Claude Code, and OpenCode. The [open-source log](https://th3nolo.com/open-source) has the evidence for each one.
 
 ### Latest engineering notes
 
