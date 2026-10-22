@@ -1,8 +1,9 @@
 <h1 align="center">Manuel Parra</h1>
 
 <p align="center">
-  <strong>Forward deployed AI engineer · lead IC</strong><br>
+  <strong>Forward deployed AI engineer · LLM fine-tuning · lead IC</strong><br>
   I work with clients to put document AI and model inference into production, and I build the backend around it.<br>
+  I also fine-tune and serve open-weight models on my own GPUs: synthetic data, LoRA SFT and GRPO, held-out evaluation.<br>
   Remote from UTC-4. English and Spanish. Open to senior and lead IC roles.
 </p>
 
@@ -11,6 +12,7 @@
   <a href="https://th3nolo.com/articles">Engineering notes</a> ·
   <a href="https://th3nolo.com/open-source">Open-source log</a> ·
   <a href="https://th3nolo.com/cv">CV</a> ·
+  <a href="https://huggingface.co/th3nolo">Hugging Face</a> ·
   <a href="https://www.linkedin.com/in/th3nolo/">LinkedIn</a>
 </p>
 
@@ -18,15 +20,27 @@
 
 Most of my client work is private, so the results below link to case studies and write-ups. The public projects further down are code you can clone and run.
 
-### Measured results
+### AI engineering: measured results
 
 | System | Result | Source |
 |---|---|---|
 | Financial document AI, Arabic and English audited statements | 34% → 94% on an internal extraction and calculation evaluation. One 22-page filing in 97 s for USD 0.30 to 0.42 | [case study](https://th3nolo.com/projects/financial-document-ai) |
 | semgate: permission gate for coding agents, TypeSafe Jev judge | 0 of 47 harmful-allow base cases on a 355-case set (95% upper bound 6.2%). 83.0% of benign actions auto-allowed (95% CI 78.4% to 87.5%) | [evals](https://github.com/th3nolo/semgate/blob/main/EVALS.md) |
 | LangGraph RAG chat, JEV-first routing | 0.981 vs 0.957 accuracy on 322 labeled messages | [note](https://th3nolo.com/articles/how-routing-a-langgraph-rag-chat-with-jev-got-me-98-accuracy) |
-| Small-model fine-tune (LoRA), training-data repair | Valid plans 1/81 → 75/81, strict pairwise F1 0.01 → 0.88 on 81 development cases | [note](https://th3nolo.com/articles/what-i-learned-fine-tuning-a-small-model) |
+
+### ML and LLM fine-tuning
+
+This is separate from the client work above. I generate training data, fine-tune open-weight models with LoRA (SFT and GRPO), evaluate them on held-out splits, and tune inference on my own GPUs. The weights, data and code are public.
+
+| Work | Result | Links |
+|---|---|---|
+| TabCrew: Qwen3.5-0.8B LoRA that groups browser tabs. SFT on 3,030 synthetic sessions, 1 epoch on one RTX 3080 | Held-out test: 369/369 valid JSON, 332/369 (90.0%) exact grouping. p50 2.21 s per session | [model](https://huggingface.co/th3nolo/tabcrew-qwen3.5-0.8b-lora-mixed-sft) · [code](https://github.com/th3nolo/tabcrew-training) · [note](https://th3nolo.com/articles/what-i-learned-fine-tuning-a-small-model) |
+| SFT vs SFT + GRPO baseline on 705 sessions | 55.6% vs 54.3% exact grouping on 81 validation sessions: the short GRPO stage gave no reliable gain. The later 3,030-session SFT run reached 95.1% on the same 81 sessions | [model](https://huggingface.co/th3nolo/tabcrew-qwen3.5-0.8b-lora-early-705) |
+| Training-data repair (continued LoRA SFT) | Valid plans 1/81 → 75/81, strict pairwise F1 0.01 → 0.88 on 81 development cases | [note](https://th3nolo.com/articles/what-i-learned-fine-tuning-a-small-model) |
+| Synthetic data pipeline: an author model writes each session, a blind regroup keeps only sessions where both groupings agree | 4,471 sessions with per-teacher provenance. Local Qwen3-4B-AWQ on SGLang: 185 → 274 tok/s after raising the KV pool from 8K to 16K tokens | [dataset](https://huggingface.co/datasets/th3nolo/tabcrew-synthetic-tab-sessions) · [recipes](https://github.com/th3nolo/tabcrew-training/tree/main/recipes/speed) |
 | GLM-5.2-504B on 8× RTX PRO 6000 (vLLM, SM120) | 240K-token context after a sparse-attention layer fix | [note](https://th3nolo.com/articles/glm-5-2-blackwell-sm120) |
+
+All TabCrew models and data: [Hugging Face collection](https://huggingface.co/collections/th3nolo/tabcrew-6ada8965cb27d41ff3edb29e).
 
 ### Public projects
 
@@ -56,4 +70,4 @@ Most of my client work is private, so the results below link to case studies and
 - [Serving GLM-5.2-504B on RTX PRO 6000: the vLLM sparse attention fix on SM120](https://th3nolo.com/articles/glm-5-2-blackwell-sm120) · 2026-07-04
 <!-- NOTES:END -->
 
-<sub>Python · TypeScript · Rust · Go · Solidity. FastAPI, NestJS, PostgreSQL, vLLM, Docker, GitHub Actions</sub>
+<sub>Python · TypeScript · Rust · Go · Solidity. PyTorch, Transformers, PEFT, TRL, vLLM, SGLang, FastAPI, NestJS, PostgreSQL, Docker, GitHub Actions</sub>
